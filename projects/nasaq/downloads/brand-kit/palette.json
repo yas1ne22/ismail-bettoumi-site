@@ -1,0 +1,16 @@
+{
+  "paper": "#F5F2ED",
+  "white": "#FFFFFF",
+  "ink": "#171717",
+  "muted": "#68635F",
+  "line": "#DCD6CE",
+  "red": "#FF3B25",
+  "red-strong": "#B82413",
+  "pink": "#F6B8D0",
+  "lavender": "#CEC5E5",
+  "mint": "#CDE7D8",
+  "yellow": "#FFD45C",
+  "success": "#256445",
+  "error": "#B82413",
+  "info": "#423879"
+}
