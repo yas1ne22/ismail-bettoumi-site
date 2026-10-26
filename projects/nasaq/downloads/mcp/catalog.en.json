@@ -1,23 +1,28 @@
 {
-  "version": "1.3.0",
+  "version": "1.5.0",
   "language": "en",
   "components": {
     "buttons": {
       "name": "Buttons",
       "desc": "Clear verbs, one primary action per decision.",
-      "html": "<div class=\"row\"><button class=\"nq-button\" data-toast=\"Primary action selected\">Start a conversation ←</button><button class=\"nq-button secondary\" data-toast=\"Example saved\">Save</button><button class=\"nq-button brand\" data-toast=\"Brand button example\">Try Nasaq</button><button class=\"nq-button\" disabled>Unavailable</button></div>",
+      "html": "<div class=\"row\"><button class=\"nq-button\" data-toast=\"Primary action selected\">Start a conversation →</button><button class=\"nq-button secondary\" data-toast=\"Example saved\">Save</button><button class=\"nq-button brand\" data-toast=\"Brand button example\">Try Nasaq</button><button class=\"nq-button\" disabled>Unavailable</button></div>",
       "snippet": "<button class=\"nq-button\">Start a conversation</button>\n<button class=\"nq-button secondary\">Save</button>\n<button class=\"nq-button brand\">Try Nasaq</button>\n<button class=\"nq-button\" disabled>Unavailable</button>",
       "rule": "Use native disabled for unavailable actions. Tie loading to actual work, keep the label meaningful, and prevent duplicate submission.",
       "props": [
         [
-          "Direction",
-          "RTL / LTR",
-          "Use logical layout and language-appropriate text."
+          "variant",
+          "default / secondary / brand",
+          "One primary action per decision."
         ],
         [
-          "States",
-          "Default / Hover / Focus / Pressed / Loading / Disabled",
-          "Pinned visual specimens; live controls use native events."
+          "size",
+          "default ≥44px / small 36px",
+          "Small is for dense secondary actions; keep primary touch targets ≥44px."
+        ],
+        [
+          "state",
+          "default / hover / focus / pressed / loading / disabled",
+          "Use native disabled; loading follows actual work."
         ]
       ],
       "states": [
@@ -50,19 +55,24 @@
     "inputs": {
       "name": "Inputs",
       "desc": "Persistent labels, concise help and actionable validation.",
-      "html": "<form id=\"input-demo\" class=\"stack\"><div class=\"nq-field\"><label for=\"demo-email\">Email address</label><input id=\"demo-email\" class=\"nq-input\" type=\"email\" placeholder=\"you@example.com\" dir=\"ltr\" aria-describedby=\"email-help\" required><span id=\"email-help\" class=\"nq-help\">Nasaq updates will be sent to this address.</span></div><button class=\"nq-button\" style=\"justify-self:start\" type=\"submit\">Validate email</button><div class=\"nq-field\"><label for=\"invalid-demo\">Project name</label><input id=\"invalid-demo\" class=\"nq-input\" aria-invalid=\"true\" aria-describedby=\"invalid-help\" value=\"\"><span id=\"invalid-help\" style=\"color:var(--nq-link)\">Enter a clear project name.</span></div></form>",
+      "html": "<form id=\"input-demo\" class=\"stack\"><div class=\"nq-field\"><label for=\"demo-email\">Email address</label><input id=\"demo-email\" class=\"nq-input\" type=\"email\" placeholder=\"you@example.com\" dir=\"ltr\" aria-describedby=\"email-help\" required><span id=\"email-help\" class=\"nq-help\">Example address. Nothing will be sent.</span></div><button class=\"nq-button\" style=\"justify-self:start\" type=\"submit\">Validate email</button><div class=\"nq-field\"><label for=\"invalid-demo\">Project name</label><input id=\"invalid-demo\" class=\"nq-input\" aria-invalid=\"true\" aria-describedby=\"invalid-help\" value=\"\"><span id=\"invalid-help\" style=\"color:var(--nq-link)\">Enter a clear project name.</span></div></form>",
       "snippet": "<div class=\"nq-field\">\n <label for=\"email\">Email address</label>\n <input id=\"email\" class=\"nq-input\" type=\"email\" dir=\"ltr\"\n        aria-describedby=\"email-help\" required>\n <span id=\"email-help\" class=\"nq-help\">Project contact address.</span>\n</div>",
       "rule": "Keep labels visible. Associate help/error messages with aria-describedby. Validate at a useful moment and preserve input after errors.",
       "props": [
         [
-          "Direction",
-          "RTL / LTR",
-          "Use logical layout and language-appropriate text."
+          "type",
+          "text / email / search / password",
+          "Choose the input type for the data, not its appearance."
         ],
         [
-          "States",
-          "Empty / Filled / Focus / Invalid / Readonly / Disabled",
-          "Pinned visual specimens; live controls use native events."
+          "state",
+          "empty / filled / focus / invalid / readonly / disabled",
+          "Readonly remains selectable; disabled is unavailable."
+        ],
+        [
+          "message",
+          "label + help + error",
+          "Connect help/error with aria-describedby."
         ]
       ],
       "states": [
@@ -100,14 +110,19 @@
       "rule": "Prefer native select for simple choices. Use a visible label and an empty prompt when no selection is required by default.",
       "props": [
         [
-          "Direction",
-          "RTL / LTR",
-          "Use logical layout and language-appropriate text."
+          "control",
+          "native select",
+          "Use for a compact list of mutually exclusive choices."
         ],
         [
-          "States",
-          "Default / Selected / Focus / Invalid / Disabled",
-          "Pinned visual specimens; live controls use native events."
+          "value",
+          "prompt / selected",
+          "Use an empty prompt when a deliberate choice is required."
+        ],
+        [
+          "state",
+          "default / focus / invalid / disabled",
+          "Keep validation outside the options."
         ]
       ],
       "states": [
@@ -141,14 +156,19 @@
       "rule": "Use a native checkbox. Set its indeterminate property for mixed state; give every choice a stable label.",
       "props": [
         [
-          "Direction",
-          "RTL / LTR",
-          "Use logical layout and language-appropriate text."
+          "selection",
+          "checked / unchecked / indeterminate",
+          "Indeterminate is a JavaScript property."
         ],
         [
-          "States",
-          "Unchecked / Checked / Mixed / Focus / Disabled",
-          "Pinned visual specimens; live controls use native events."
+          "group",
+          "fieldset + legend",
+          "Group related independent options."
+        ],
+        [
+          "state",
+          "default / focus / disabled",
+          "Keep the label in the click target."
         ]
       ],
       "states": [
@@ -182,14 +202,19 @@
       "rule": "Use a native checkbox with role=\"switch\" and a stable label. Test click, Space, on/off, disabled, RTL and LTR; keep the label target at least 44px.",
       "props": [
         [
-          "Direction",
-          "RTL / LTR",
-          "Use logical layout and language-appropriate text."
+          "geometry",
+          "48 × 28px / 20px thumb",
+          "The label provides a ≥44px touch target."
         ],
         [
-          "States",
-          "Off / On / Focus / Disabled / off / Disabled / on / LTR",
-          "Pinned visual specimens; live controls use native events."
+          "value",
+          "checked / unchecked",
+          "The label names the setting and does not change with state."
+        ],
+        [
+          "state",
+          "on / off / focus / disabled",
+          "Use role=switch on a native checkbox."
         ]
       ],
       "states": [
@@ -227,14 +252,19 @@
       "rule": "Keep role=tablist, tab and tabpanel linked with aria-controls/labelledby. Support arrows, Home and End; account for writing direction.",
       "props": [
         [
-          "Direction",
-          "RTL / LTR",
-          "Use logical layout and language-appropriate text."
+          "activation",
+          "automatic",
+          "Arrow keys move focus and select the associated panel."
         ],
         [
-          "States",
-          "Unselected / Selected / Focus / Disabled",
-          "Pinned visual specimens; live controls use native events."
+          "relation",
+          "tablist / tab / tabpanel",
+          "Each tab controls exactly one panel."
+        ],
+        [
+          "direction",
+          "RTL / LTR",
+          "Arrow movement follows the reading direction."
         ]
       ],
       "states": [
@@ -264,14 +294,19 @@
       "rule": "Badges communicate status without acting like buttons. Include a written label; do not rely on color alone.",
       "props": [
         [
-          "Direction",
-          "RTL / LTR",
-          "Use logical layout and language-appropriate text."
+          "tone",
+          "neutral / success / warning / error",
+          "Include text; tone alone is insufficient."
         ],
         [
-          "States",
-          "Neutral / Success / Warning / Error",
-          "Pinned visual specimens; live controls use native events."
+          "interaction",
+          "non-interactive",
+          "A badge is not a button."
+        ],
+        [
+          "content",
+          "short status label",
+          "Allow translation expansion."
         ]
       ],
       "states": [
@@ -301,14 +336,19 @@
       "rule": "If the adjacent name repeats the identity, mark the avatar decorative. Provide an accessible label when the image carries meaning.",
       "props": [
         [
-          "Direction",
-          "RTL / LTR",
-          "Use logical layout and language-appropriate text."
+          "content",
+          "image / initials / assistant / fallback",
+          "Use a meaningful fallback when an image fails."
         ],
         [
-          "States",
-          "Initials / Assistant / Fallback / Online",
-          "Pinned visual specimens; live controls use native events."
+          "shape",
+          "circle",
+          "Keep dimensions stable while content loads."
+        ],
+        [
+          "presence",
+          "optional status",
+          "Pair presence with written meaning."
         ]
       ],
       "states": [
@@ -338,14 +378,19 @@
       "rule": "Use native dialog.showModal(). Preserve a labelled heading, Escape dismissal, focus containment and focus return. Destructive decisions need clear consequences.",
       "props": [
         [
-          "Direction",
-          "RTL / LTR",
-          "Use logical layout and language-appropriate text."
+          "element",
+          "native dialog",
+          "Open with showModal; close with close."
         ],
         [
-          "States",
-          "Closed / Open / visual / Destructive / visual",
-          "Pinned visual specimens; live controls use native events."
+          "focus",
+          "initial + containment + return",
+          "Choose an appropriate initial control."
+        ],
+        [
+          "dismiss",
+          "Escape / explicit close",
+          "Avoid nesting dialogs."
         ]
       ],
       "states": [
@@ -371,14 +416,19 @@
       "rule": "Keep essential instructions in visible text. Link with aria-describedby, reveal on focus and hover, and allow Escape to dismiss.",
       "props": [
         [
-          "Direction",
-          "RTL / LTR",
-          "Use logical layout and language-appropriate text."
+          "relation",
+          "aria-describedby",
+          "The tooltip supplements the control’s existing name."
         ],
         [
-          "States",
-          "Hidden / Hover / visible / Focus / visible",
-          "Pinned visual specimens; live controls use native events."
+          "trigger",
+          "hover + focus",
+          "Never make content exclusive to pointer hover."
+        ],
+        [
+          "dismiss",
+          "Escape",
+          "Do not place interactive controls inside."
         ]
       ],
       "states": [
@@ -404,14 +454,19 @@
       "rule": "Use a fieldset and legend with a shared name. Native arrow keys and Space should select choices. Radios select, rather than execute an action.",
       "props": [
         [
-          "Direction",
-          "RTL / LTR",
-          "Use logical layout and language-appropriate text."
+          "group",
+          "same name + fieldset + legend",
+          "One required choice among visible alternatives."
         ],
         [
-          "States",
-          "Unchecked / Checked / Focus / Disabled",
-          "Pinned visual specimens; live controls use native events."
+          "selection",
+          "checked / unchecked",
+          "Use an explicit default only when justified."
+        ],
+        [
+          "state",
+          "default / focus / disabled",
+          "Keep unavailable options explained."
         ]
       ],
       "states": [
@@ -441,14 +496,19 @@
       "rule": "Allow vertical resizing, explain limits before input, and preserve drafts. Keep a visible label and associated help text.",
       "props": [
         [
-          "Direction",
-          "RTL / LTR",
-          "Use logical layout and language-appropriate text."
+          "rows",
+          "minimum 3 recommended",
+          "Keep resizing available."
         ],
         [
-          "States",
-          "Empty / Filled / Focus / Invalid / Disabled",
-          "Pinned visual specimens; live controls use native events."
+          "state",
+          "empty / filled / focus / invalid / readonly / disabled",
+          "Preserve content after errors."
+        ],
+        [
+          "limit",
+          "only when a real product limit exists",
+          "Explain remaining allowance before blocking."
         ]
       ],
       "states": [
@@ -482,14 +542,19 @@
       "rule": "Use a written status and a clear recovery action. Reserve role=alert for urgent updates; avoid announcing static page content repeatedly.",
       "props": [
         [
-          "Direction",
-          "RTL / LTR",
-          "Use logical layout and language-appropriate text."
+          "tone",
+          "info / success / warning / error",
+          "Write what happened and what the user can do."
         ],
         [
-          "States",
-          "Info / Success / Warning / Error",
-          "Pinned visual specimens; live controls use native events."
+          "announcement",
+          "status / alert",
+          "Use alert only for urgent new information."
+        ],
+        [
+          "action",
+          "optional retry or recovery",
+          "Keep recovery adjacent to the message."
         ]
       ],
       "states": [
@@ -519,14 +584,19 @@
       "rule": "Set value and max only when progress is known. Give the control a label. Omit value for indeterminate work and stop when finished or failed.",
       "props": [
         [
-          "Direction",
-          "RTL / LTR",
-          "Use logical layout and language-appropriate text."
+          "value",
+          "0–100 when known",
+          "Do not fabricate a percentage."
         ],
         [
-          "States",
-          "Empty / Active / Complete / Indeterminate",
-          "Pinned visual specimens; live controls use native events."
+          "mode",
+          "determinate / indeterminate",
+          "Use indeterminate when duration is unknown."
+        ],
+        [
+          "label",
+          "visible status + native progress",
+          "State the actual unit of work."
         ]
       ],
       "states": [
@@ -556,14 +626,19 @@
       "rule": "Keep skeletons decorative, mark the content region aria-busy during work, and expose a textual status. Respect reduced motion and show a recoverable error.",
       "props": [
         [
-          "Direction",
-          "RTL / LTR",
-          "Use logical layout and language-appropriate text."
+          "meaning",
+          "decorative",
+          "Hide shapes from assistive technology."
         ],
         [
-          "States",
-          "Loading / Reduced motion / Loaded / Error",
-          "Pinned visual specimens; live controls use native events."
+          "region",
+          "aria-busy during loading",
+          "Announce a concise written loading status."
+        ],
+        [
+          "motion",
+          "optional",
+          "Respect reduced motion."
         ]
       ],
       "states": [
@@ -593,14 +668,19 @@
       "rule": "Prefer native details/summary. Keep headings and key decisions visible outside collapsed content. Do not use fabricated disabled states.",
       "props": [
         [
-          "Direction",
-          "RTL / LTR",
-          "Use logical layout and language-appropriate text."
+          "element",
+          "details + summary",
+          "Use native disclosure where possible."
         ],
         [
-          "States",
-          "Collapsed / Expanded / Focus",
-          "Pinned visual specimens; live controls use native events."
+          "state",
+          "open / closed",
+          "The summary remains visible."
+        ],
+        [
+          "content",
+          "supporting detail",
+          "Keep essential instructions outside."
         ]
       ],
       "states": [
@@ -626,14 +706,19 @@
       "rule": "Use article for content. Make actions native links/buttons, avoiding nested interactive controls. Support empty, loading and error content.",
       "props": [
         [
-          "Direction",
-          "RTL / LTR",
-          "Use logical layout and language-appropriate text."
+          "element",
+          "article",
+          "Use meaningful headings within a collection."
         ],
         [
-          "States",
-          "Default / Hover / Focus action / Empty / Loading",
-          "Pinned visual specimens; live controls use native events."
+          "action",
+          "explicit link/button",
+          "Avoid nested interactive controls."
+        ],
+        [
+          "state",
+          "content / empty / loading / error",
+          "Keep surface geometry useful on narrow screens."
         ]
       ],
       "states": [
@@ -667,14 +752,19 @@
       "rule": "Use a labelled nav, links for ancestors and aria-current=page for the current location. Wrap rather than truncate essential context.",
       "props": [
         [
-          "Direction",
-          "RTL / LTR",
-          "Use logical layout and language-appropriate text."
+          "element",
+          "nav + ordered list",
+          "Give the navigation a useful name."
         ],
         [
-          "States",
-          "Default / Focus / Current / Compact",
-          "Pinned visual specimens; live controls use native events."
+          "current",
+          "aria-current=page",
+          "The current item is plain text when possible."
+        ],
+        [
+          "overflow",
+          "wrap / simplify",
+          "Preserve the immediate parent."
         ]
       ],
       "states": [

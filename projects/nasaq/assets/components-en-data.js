@@ -2,7 +2,7 @@ globalThis.NASAQ_COMPONENTS_EN={
   "buttons": {
     "name": "Buttons",
     "desc": "Clear verbs, one primary action per decision.",
-    "html": "<div class=\"row\"><button class=\"nq-button\" data-toast=\"Primary action selected\">Start a conversation ←</button><button class=\"nq-button secondary\" data-toast=\"Example saved\">Save</button><button class=\"nq-button brand\" data-toast=\"Brand button example\">Try Nasaq</button><button class=\"nq-button\" disabled>Unavailable</button></div>",
+    "html": "<div class=\"row\"><button class=\"nq-button\" data-toast=\"Primary action selected\">Start a conversation →</button><button class=\"nq-button secondary\" data-toast=\"Example saved\">Save</button><button class=\"nq-button brand\" data-toast=\"Brand button example\">Try Nasaq</button><button class=\"nq-button\" disabled>Unavailable</button></div>",
     "snippet": "<button class=\"nq-button\">Start a conversation</button>\n<button class=\"nq-button secondary\">Save</button>\n<button class=\"nq-button brand\">Try Nasaq</button>\n<button class=\"nq-button\" disabled>Unavailable</button>",
     "rule": "Use native disabled for unavailable actions. Tie loading to actual work, keep the label meaningful, and prevent duplicate submission.",
     "props": [
@@ -47,7 +47,7 @@ globalThis.NASAQ_COMPONENTS_EN={
   "inputs": {
     "name": "Inputs",
     "desc": "Persistent labels, concise help and actionable validation.",
-    "html": "<form id=\"input-demo\" class=\"stack\"><div class=\"nq-field\"><label for=\"demo-email\">Email address</label><input id=\"demo-email\" class=\"nq-input\" type=\"email\" placeholder=\"you@example.com\" dir=\"ltr\" aria-describedby=\"email-help\" required><span id=\"email-help\" class=\"nq-help\">Nasaq updates will be sent to this address.</span></div><button class=\"nq-button\" style=\"justify-self:start\" type=\"submit\">Validate email</button><div class=\"nq-field\"><label for=\"invalid-demo\">Project name</label><input id=\"invalid-demo\" class=\"nq-input\" aria-invalid=\"true\" aria-describedby=\"invalid-help\" value=\"\"><span id=\"invalid-help\" style=\"color:var(--nq-link)\">Enter a clear project name.</span></div></form>",
+    "html": "<form id=\"input-demo\" class=\"stack\"><div class=\"nq-field\"><label for=\"demo-email\">Email address</label><input id=\"demo-email\" class=\"nq-input\" type=\"email\" placeholder=\"you@example.com\" dir=\"ltr\" aria-describedby=\"email-help\" required><span id=\"email-help\" class=\"nq-help\">Example address. Nothing will be sent.</span></div><button class=\"nq-button\" style=\"justify-self:start\" type=\"submit\">Validate email</button><div class=\"nq-field\"><label for=\"invalid-demo\">Project name</label><input id=\"invalid-demo\" class=\"nq-input\" aria-invalid=\"true\" aria-describedby=\"invalid-help\" value=\"\"><span id=\"invalid-help\" style=\"color:var(--nq-link)\">Enter a clear project name.</span></div></form>",
     "snippet": "<div class=\"nq-field\">\n <label for=\"email\">Email address</label>\n <input id=\"email\" class=\"nq-input\" type=\"email\" dir=\"ltr\"\n        aria-describedby=\"email-help\" required>\n <span id=\"email-help\" class=\"nq-help\">Project contact address.</span>\n</div>",
     "rule": "Keep labels visible. Associate help/error messages with aria-describedby. Validate at a useful moment and preserve input after errors.",
     "props": [

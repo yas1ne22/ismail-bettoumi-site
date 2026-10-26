@@ -2,7 +2,7 @@
 
 ## Marketing
 
-Hero: mint or paper field, large Almarai headline, short benefit paragraph, one primary CTA. Keep ink foreground on pastel fields; never use red or black marketing sections. Editorial cards: color/image area + category + title + explicit link; avoid nested links/buttons. Newsletter: lavender surface + short title + labelled email + button + status; only connect collection when requested. Pricing: genuine prices/features from product; if hypothetical mark all plans illustrative and do not imply checkout exists. FAQ: native details/summary. Footer: identity + a short description + functional navigation.
+Hero: cool neutral or blue-tinted field, large Almarai headline, short benefit paragraph, one primary CTA. Keep ink foreground on pastel fields; reserve red for error feedback and use explicit foregrounds on graphite. Editorial cards: color/image area + category + title + explicit link; avoid nested links/buttons. Newsletter: neutral or blue-tinted surface + short title + labelled email + button + status; only connect collection when requested. Pricing: genuine prices/features from product; if hypothetical mark all plans illustrative and do not imply checkout exists. FAQ: native details/summary. Footer: identity + a short description + functional navigation.
 
 The example marketing.html contains all six compositions. Reuse its anatomy, adjust actual product copy, and use the host routes. Do not copy demo anchors or fixed illustrative prices into a production product unreviewed.
 

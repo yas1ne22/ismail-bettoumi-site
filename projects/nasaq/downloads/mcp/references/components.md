@@ -7,7 +7,7 @@
 | Select | nq-select | Native select for a modest set; visible label; do not replace with div |
 | Checkbox | nq-check | Native checkbox + clickable label; fieldset/legend for groups; independent choices |
 | Switch | nq-check + nq-switch | Native checkbox role=switch; fixed label; immediate setting; Space works |
-| Tabs | nq-tabs + data-tabs | tablist/tab/tabpanel roles; controls/labelledby IDs; roving tabindex; RTL arrows/Home/End |
+| Tabs | nq-tabs + data-tabs | tablist/tab/tabpanel roles; controls/labelledby IDs; roving tabindex; automatic activation with RTL arrows/Home/End; skip disabled tabs |
 | Badge | nq-badge, success, error | Noninteractive status/category; visible text; live region only for meaningful changes |
 | Avatar | nq-avatar, large, square | Circle person/square assistant; initials fallback; avoid duplicate accessible name |
 | Dialog | nq-dialog + data-open/data-close | Native showModal; name with labelledby; Escape; visible cancel; focus return |
@@ -24,7 +24,7 @@ Avoid IDs shared across examples. Trap focus through the native dialog behavior.
 Radio: native grouped radios with a shared name, fieldset/legend, selected/focus/disabled states.
 Textarea: labelled multiline input, resizable vertically, with persistent help and actionable error.
 Alert: information/success/warning/error, color paired with text; role=alert only for newly inserted urgent messages.
-Progress: native progress, known value/max or indeterminate without value; visible status text.
+Progress: native progress with an 8px track, known value/max or indeterminate without value; visible task label and status. Unknown work has no percentage. Reduced motion keeps a static indicator.
 Skeleton: aria-busy on container, decorative placeholders, reduced-motion respected, leave loading on completion/error.
 Accordion: native details/summary; collapsed/expanded/focus.
 Cards: semantic article, heading and explicit action; avoid nested interactive links.

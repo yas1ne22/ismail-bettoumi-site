@@ -1,14 +1,14 @@
 # Foundations
 
 The canonical portable values are in ../assets/tokens.json and ../assets/nasaq.css.
-JSON follows the DTCG typed token structure: color primitives use sRGB components, alpha, and a hex fallback; semantic tokens reference primitives. Light and dark semantic groups are separate so a converter can assign them to modes. This bundle does not create Figma Variables automatically.
+JSON follows the DTCG typed token structure: color primitives use sRGB components, alpha, and a hex fallback; semantic tokens define mode-specific usage roles. Light and dark semantic groups are separate so a converter can assign them to modes. This bundle does not create Figma Variables automatically.
 
 ## Color and modes
 
-Light: background paper, surface white, text/action ink, on-action white, border line, muted #68635F, link #B82413, focus #423879.
-Dark: background #171717, surface #272625, text/action paper, on-action ink, border #4A4745, muted/focus lavender, link pink. Brand/pastel compositions retain ink foreground even inside dark contexts.
+Light: background #F4F6F8, surface #FFFFFF, text #18202B, muted #566171, action/focus #1D4ED8, on-action #FFFFFF, link #1D4ED8. Neutral hover #E9EDF3; pressed #DEE5EF; selected #E9EFFF with text #173FAE.
+Dark: background #101318, surface #1B2028, text #EDF1F7, muted #AAB7C8, action #8EB2FF, on-action #10214B. Hover #283341; pressed #344253; selected #23344D with text #B3CBFF. Brand compositions use explicit foreground and background roles in both themes.
 
-Semantic variables cover interactive UI. Brand backgrounds use primitive tokens explicitly with tested foregrounds. Line is a decorative separator; controls must also have text/shape and visible focus, not rely on border contrast alone.
+Semantic variables cover interactive UI. Brand backgrounds use primitive tokens explicitly with tested foregrounds. Border is a decorative separator. Inputs use border-strong (#7D8A9B light / #718096 dark) for a visible boundary. Preserve text/shape and a distinct focus ring.
 
 ## Typography
 
@@ -22,11 +22,11 @@ Original stroke icons on24px grid,1.75px strokes. Inline SVG supports currentCol
 
 ## Effects / motion
 
-Floating surface shadow:0 8px 24px #17171712. Focus ring:3px,4px offset. Dialog backdrop:#17171788. Border-only ordinary cards. Fast state transitions120ms, entry200ms. Disable optional motion under reduced-motion.
+Floating surface shadow:0 8px 24px #18202B12. Focus ring:3px,4px offset. Dialog backdrop:#18202B88. Border-only ordinary cards. Fast state transitions120ms, entry200ms. Disable optional motion under reduced-motion.
 
 ## Grid / radius
 
-12/8/4 columns across desktop/tablet/mobile. Gaps24/24/16px. Radii0/4/12/20/999px. CSS utilities are starters; compose responsive layout for the actual content. RTL logical properties are required.
+12/8/4 columns across desktop/tablet/mobile. Gaps24/24/16px. Primitive radii0/4/12/20/999px; component aliases use12px controls and cards. CSS utilities are starters; compose responsive layout for the actual content. RTL logical properties are required.
 
 Token format reference: https://www.designtokens.org/tr/2025.10/format/
 

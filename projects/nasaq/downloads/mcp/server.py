@@ -81,7 +81,7 @@ def dispatch(method, params):
     if method=='initialize':
         if not isinstance(params.get('protocolVersion'),str): raise RpcError(-32602,'protocolVersion is required')
         initialized=True; ready=False
-        return {'protocolVersion':params['protocolVersion'] if params['protocolVersion'] in VERSIONS else VERSIONS[0],'capabilities':{'tools':{'listChanged':False},'resources':{'subscribe':False,'listChanged':False},'prompts':{'listChanged':False}},'serverInfo':{'name':'nasaq','version':'1.3.0'},'instructions':'Use the supplied Nasaq rules and tokens. Arabic RTL with Almarai; English LTR with Inter. Request language=en for English components/patterns. All tools are read-only.'}
+        return {'protocolVersion':params['protocolVersion'] if params['protocolVersion'] in VERSIONS else VERSIONS[0],'capabilities':{'tools':{'listChanged':False},'resources':{'subscribe':False,'listChanged':False},'prompts':{'listChanged':False}},'serverInfo':{'name':'nasaq','version':'1.5.0'},'instructions':'Use the supplied Nasaq rules and tokens. Arabic RTL with Almarai; English LTR with Inter. Request language=en for English components/patterns. All tools are read-only.'}
     if method=='notifications/initialized':
         if initialized: ready=True
         return None
