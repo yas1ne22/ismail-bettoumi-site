@@ -15,3 +15,5 @@
 .material-docs .material-rail{gap:4px;padding-block:16px 12px}.material-rail>a,.material-rail>button{min-height:58px}.material-rail .rail-bottom{gap:6px;padding-top:8px}.material-rail .locale-link{min-height:32px}.material-hero h1{font-weight:400}.material-hero .material-cta{font-weight:400}
 @media(max-height:800px){.material-rail .rail-portfolio{display:none}}
 @media(max-height:650px){.material-docs .material-rail{gap:1px;padding-block:8px}.material-rail>a,.material-rail>button{min-height:50px}.material-rail .rail-bottom{gap:3px}.rail-search{margin-bottom:2px}}
+
+[data-theme=dark] .material-rail img{filter:brightness(0) invert(1)}
