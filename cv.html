@@ -12,13 +12,11 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ismail Bettoumi — Resume / Curriculum Vitae</title>
+    <title>Ismail Bettoumi: Resume / Curriculum Vitae</title>
     <meta name="description" content="Resume of Ismail Bettoumi, Product Designer focused on UX strategy and AI enablement, based in Doha, Qatar." />
     <link rel="icon" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
+@font-face{font-family:Inter;src:url(/projects/nasaq/assets/inter-variable.ttf) format('truetype');font-weight:100 900;font-display:swap}
       :root {
         --text-primary: #111827;
         --text-secondary: #374151;
@@ -75,7 +73,7 @@
       }
 
       .btn-print {
-        background: #2c6fff;
+        background: #254dd7;
         color: #ffffff;
         border: none;
         padding: 8px 16px;
@@ -480,7 +478,18 @@
       @media (max-width:420px) { .cv-header { grid-template-columns:minmax(0,1fr) 84px; gap:10px; } .cv-whatsapp { font-size:8px; } .cv-whatsapp img { width:70px; height:70px; } }
       @media print { .cv-header { grid-template-columns:minmax(0,1fr) 86px; gap:14px; } .cv-whatsapp { font-size:8px; } .cv-whatsapp img { width:68px; height:68px; } }
     </style>
-  </head>
+    <link rel="stylesheet" href="/no-arrows.css">
+<link rel="canonical" href="https://ismail-bettoumi.com/cv.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ismail Bettoumi: Resume / Curriculum Vitae">
+<meta property="og:description" content="Resume of Ismail Bettoumi, Product Designer focused on UX strategy and AI enablement, based in Doha, Qatar.">
+<meta property="og:url" content="https://ismail-bettoumi.com/cv.html">
+<meta property="og:image" content="https://ismail-bettoumi.com/assets/ismail-bettoumi-share.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ismail Bettoumi: Resume / Curriculum Vitae">
+<meta name="twitter:description" content="Resume of Ismail Bettoumi, Product Designer focused on UX strategy and AI enablement, based in Doha, Qatar.">
+<meta name="twitter:image" content="https://ismail-bettoumi.com/assets/ismail-bettoumi-share.png">
+</head>
   <body>
     <!-- Top Action Toolbar -->
     <div class="cv-bar">
@@ -488,7 +497,8 @@
         <span>Ismail Bettoumi · Curriculum Vitae</span>
       </div>
       <div class="cv-bar-actions">
-        <a class="btn-back" href="/">← Return to Portfolio</a>
+        <a class="btn-back" href="/"> Return to Portfolio</a>
+        <a class="btn-back" href="/Ismail_Bettoumi_CV.pdf" download>Download CV (PDF)</a>
         <button class="btn-print" onclick="window.print()">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
           <span>Print / Save as PDF</span>
@@ -501,7 +511,7 @@
       <header class="cv-header">
         <div class="cv-header-copy">
         <h1 class="cv-name">Ismail Bettoumi</h1>
-        <p class="cv-role">Product Designer · AI Product Builder</p>
+        <p class="cv-role">Product Designer</p>
         <div class="cv-contact-line">
           <span>Doha, Qatar</span>
           <span class="cv-bullet-sep">•</span>
@@ -520,21 +530,21 @@
 
       <section class="cv-section">
         <h2 class="cv-sec-title">Profile</h2>
-        <p class="cv-summary">UX designer and AI product builder with a background in AI enablement and marketing. I shape meaningful user journeys around real needs, clear decisions, and purposeful interactions—from first discovery to task completion. I combine research, conversion strategy, and AI-ready design systems to turn product ideas into working experiences.</p>
+        <p class="cv-summary">UX designer and AI product builder with a background in AI enablement and marketing. I shape meaningful user journeys around real needs, clear decisions, and purposeful interactions, from first discovery to task completion. I combine research, conversion strategy, and AI-ready design systems to turn product ideas into working experiences.</p>
       </section>
       <section class="cv-section">
         <h2 class="cv-sec-title">Skills</h2>
         <div class="skills-list">
           <p class="skill-item"><span class="skill-label">Design:</span> User flows, journey mapping, wireframes, responsive interfaces, prototyping, Figma.</p>
           <p class="skill-item"><span class="skill-label">Systems:</span> Design-system architecture, typed tokens, reusable component libraries, RTL/LTR support, Figma plug-in development, system audits, installable UI packages.</p>
-          <p class="skill-item"><span class="skill-label">Working methods:</span> User interviews, research synthesis, usability reviews, A/B testing, journey optimization, conversion optimization.</p>
+          <p class="skill-item"><span class="skill-label">Working methods:</span> Journey mapping, heuristic review, interaction-state design, usability-test planning, experiment planning, conversion analysis.</p>
           <p class="skill-item"><span class="skill-label">AI:</span> ChatGPT, Claude, Codex, context engineering, prompt design, AI-assisted prototyping, MCP integrations, workflow automation, answer engine optimization (AEO).</p>
           <p class="skill-item"><span class="skill-label">Marketing:</span> Google Ads, Meta Ads, SEO, content planning, email campaigns, audience segmentation, A/B testing, customer retention.</p>
         </div>
       </section>
       <section class="cv-section">
         <h2 class="cv-sec-title">Selected projects</h2>
-        <article class="exp-item"><h3 class="exp-title"><a href="/projects/nasaq/case-study-en.html">Nasaq · Independent Arabic/English design system</a></h3><p class="cv-summary">Designed an Arabic/English system for AI products with 286 typed tokens, 18 components with documented states, and 12 interface patterns. Delivered RTL/LTR documentation, an installable npm package, a brand kit, and an AI skill with a local MCP server for developer handoff.</p></article>
+        <article class="exp-item"><h3 class="exp-title"><a href="/projects/nasaq/case-study-en.html">Nasaq · Independent Arabic/English design system</a></h3><p class="cv-summary">Designed an Arabic/English system for AI products with 340 typed tokens (v1.5), 18 components with documented states, and 12 interface patterns. Delivered RTL/LTR documentation, an installable npm package, a brand kit, and an AI skill with a local MCP server for developer handoff.</p></article>
         <article class="exp-item"><h3 class="exp-title"><a href="/projects/andalus/index.html">Cart recovery · Andalus Smart Way</a></h3><p class="cv-summary">Designed an end-to-end UX strategy focused on conversion: reconnect interrupted bookings across web, app, and email, restore saved context, explain fare changes, and guide travelers through to booking completion.</p></article>
         <article class="exp-item"><h3 class="exp-title">Other work</h3><ul class="exp-bullets">
           <li><strong>Design Handoff & Design System Doctor:</strong> Built Figma audit tools that surface delivery risks and system drift in prioritized review reports.</li>
@@ -546,8 +556,8 @@
       <section class="cv-section">
         <h2 class="cv-sec-title">Experience</h2>
         <article class="exp-item"><div class="exp-header"><div><span class="exp-title">Product Enablement & UX Consultant</span> · <span class="exp-company">Independent</span></div><span class="exp-meta">Jan 2025 – Present</span></div><ul class="exp-bullets"><li>Built Nasaq into an AI-ready design system, connecting typed tokens and component rules to an installable package, an AI skill, and a local MCP server.</li><li>Created Design Handoff and Design System Doctor, Figma tools that flag delivery risks and design-system inconsistencies with structured review reports.</li><li>Built Nexus, a browser workspace for organizing saved links, design references, and daily research.</li><li>Designed Flex Academy’s client website around 2 audience journeys: webinar registration for beginners and strategy calls for existing operators.</li></ul></article>
-        <article class="exp-item"><div class="exp-header"><div><span class="exp-title">UX Strategy Focus · Senior Marketing Specialist</span> · <span class="exp-company">Andalus Smart Way</span></div><span class="exp-meta">Jan – Dec 2024</span></div><ul class="exp-bullets"><li>Designed booking-recovery journeys across 3 channels: web, app, and email.</li><li>Connected marketing, customer experience, and measurement around saved booking context; the case study reports a 13–15% return rate and a 4% booking rate after recovery.</li></ul></article>
-        <article class="exp-item"><div class="exp-header"><div><span class="exp-title">Marketing Specialist</span> · <span class="exp-company">Zer</span></div><span class="exp-meta">Jan – Dec 2023</span></div><ul class="exp-bullets"><li>Translated user interviews into clear priorities by identifying unmet needs, decision barriers, and friction across the customer journey.</li><li>Refined landing-page messaging, content hierarchy, and calls to action to connect user intent with the right next step.</li><li>Planned A/B tests across pages and follow-up journeys to evaluate usability and conversion opportunities.</li></ul></article>
+        <article class="exp-item"><div class="exp-header"><div><span class="exp-title">Senior Marketing Specialist</span> · <span class="exp-company">Andalus Smart Way</span></div><span class="exp-meta">Jan – Dec 2024</span></div><ul class="exp-bullets"><li>Designed booking-recovery journeys across 3 channels: web, app, and email.</li><li>Connected marketing, customer experience, and measurement around saved booking context; programme reporting supplied to the case study describes a 13–15% return rate and a 4% booking rate after recovery. These are reported programme rates, not measured incremental design lift.</li></ul></article>
+        <article class="exp-item"><div class="exp-header"><div><span class="exp-title">Marketing Specialist</span> · <span class="exp-company">Zer</span></div><span class="exp-meta">Jan – Dec 2023</span></div><ul class="exp-bullets"><li>Identified decision barriers and friction across customer journeys, then translated them into landing-page priorities.</li><li>Refined landing-page messaging, content hierarchy, and calls to action to connect user intent with the right next step.</li><li>Planned A/B tests across pages and follow-up journeys to evaluate usability and conversion opportunities.</li></ul></article>
       </section>
 
       <!-- Education & Certifications -->
@@ -582,5 +592,6 @@
       </div>
 
     </main>
+    <footer class="cv-updated" style="max-width:1080px;margin:16px auto;padding:0 24px;color:#42564a;font:12px/1.6 Arial,sans-serif"><time datetime="2026-11-11">Updated 11 November 2026</time></footer>
   </body>
 </html>

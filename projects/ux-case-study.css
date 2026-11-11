@@ -282,7 +282,7 @@ h2 {
 }
 
 .flow-step:not(:last-child)::after {
-  content: "→";
+  content: "";
   position: absolute;
   right: -16px;
   top: 50%;

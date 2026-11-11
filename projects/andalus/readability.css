@@ -338,3 +338,25 @@ footer {
     padding: 28px;
   }
 }
+
+.andalus-timeline{list-style:none;padding:0;margin:26px 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.andalus-timeline li{min-width:0;border-top:2px solid #254dd7;padding-top:16px}
+.andalus-period{font-size:12px!important;font-weight:650;color:#172536!important;line-height:1.7;margin:0 0 12px}
+.andalus-timeline h3{font-size:18px;line-height:1.4;margin:0 0 12px}
+.andalus-timeline p:not(.andalus-period),.andalus-context-note{font-size:14px;line-height:1.8;color:#4f6173}
+.andalus-context-note a{display:inline-flex;align-items:center;min-height:44px;color:#254dd7}
+.andalus-handoff{margin-top:24px;padding:24px;border:1px solid #cbd4dc;border-radius:8px;background:#fff;scroll-margin-top:24px}
+.andalus-handoff summary{min-height:44px;font-size:16px;font-weight:650;line-height:1.6;cursor:pointer}
+.andalus-handoff h3{font-size:25px;line-height:1.3;margin:24px 0 14px}
+.andalus-handoff p{font-size:14px;line-height:1.8;color:#4f6173;overflow-wrap:anywhere}
+.andalus-scenario{padding:18px 20px;background:#eef3fb;border-inline-start:3px solid #254dd7}
+.andalus-scenario>strong{display:block;color:#172536}
+.andalus-handoff-steps{padding-inline-start:24px;margin:24px 0;list-style:decimal-leading-zero}
+.andalus-handoff-steps li{display:list-item;border-top:1px solid #cbd4dc;padding:20px 0 20px 8px}
+.andalus-handoff-steps li>div{display:inline-block;vertical-align:top;width:calc(33.333% - 20px);margin-inline-end:20px}
+.andalus-handoff-steps li::marker{color:#254dd7;font-size:13px;font-weight:650}
+.andalus-handoff-steps h4{font-size:17px;line-height:1.5;margin:0 0 12px}
+.andalus-handoff-steps strong{display:block;font-size:12px;font-weight:650;color:#172536;margin-bottom:6px}
+.andalus-handoff-steps p{margin:0}
+.andalus-handoff a{display:inline-flex;align-items:center;min-height:44px;color:#254dd7}
+@media(max-width:760px){.andalus-timeline{grid-template-columns:1fr;gap:20px}.andalus-handoff{padding:20px}.andalus-handoff-steps li>div{display:block;width:auto;margin:0 0 18px}.andalus-handoff-steps li>div:last-child{margin-bottom:0}}

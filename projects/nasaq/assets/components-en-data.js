@@ -2,7 +2,7 @@ globalThis.NASAQ_COMPONENTS_EN={
   "buttons": {
     "name": "Buttons",
     "desc": "Clear verbs, one primary action per decision.",
-    "html": "<div class=\"row\"><button class=\"nq-button\" data-toast=\"Primary action selected\">Start a conversation →</button><button class=\"nq-button secondary\" data-toast=\"Example saved\">Save</button><button class=\"nq-button brand\" data-toast=\"Brand button example\">Try Nasaq</button><button class=\"nq-button\" disabled>Unavailable</button></div>",
+    "html": "<div class=\"row\"><button class=\"nq-button\" data-toast=\"Primary action selected\">Start a conversation </button><button class=\"nq-button secondary\" data-toast=\"Example saved\">Save</button><button class=\"nq-button brand\" data-toast=\"Brand button example\">Try Nasaq</button><button class=\"nq-button\" disabled>Unavailable</button></div>",
     "snippet": "<button class=\"nq-button\">Start a conversation</button>\n<button class=\"nq-button secondary\">Save</button>\n<button class=\"nq-button brand\">Try Nasaq</button>\n<button class=\"nq-button\" disabled>Unavailable</button>",
     "rule": "Use native disabled for unavailable actions. Tie loading to actual work, keep the label meaningful, and prevent duplicate submission.",
     "props": [
@@ -65,27 +65,27 @@ globalThis.NASAQ_COMPONENTS_EN={
     "states": [
       {
         "name": "Empty",
-        "html": "<input class=\"nq-input\" aria-label=\"Project name — empty\" placeholder=\"Project name\">"
+        "html": "<input class=\"nq-input\" aria-label=\"Project name: empty\" placeholder=\"Project name\">"
       },
       {
         "name": "Filled",
-        "html": "<input class=\"nq-input\" aria-label=\"Project name — filled\" value=\"Nasaq project\">"
+        "html": "<input class=\"nq-input\" aria-label=\"Project name: filled\" value=\"Nasaq project\">"
       },
       {
         "name": "Focus",
-        "html": "<input class=\"nq-input state-focus\" aria-label=\"Project name — focus\" value=\"Nasaq project\">"
+        "html": "<input class=\"nq-input state-focus\" aria-label=\"Project name: focus\" value=\"Nasaq project\">"
       },
       {
         "name": "Invalid",
-        "html": "<input class=\"nq-input\" aria-label=\"Project name — invalid\" aria-invalid=\"true\" aria-describedby=\"state-input-error\"><small id=\"state-input-error\" class=\"nq-error-text\">Project name is required.</small>"
+        "html": "<input class=\"nq-input\" aria-label=\"Project name: invalid\" aria-invalid=\"true\" aria-describedby=\"state-input-error\"><small id=\"state-input-error\" class=\"nq-error-text\">Project name is required.</small>"
       },
       {
         "name": "Readonly",
-        "html": "<input class=\"nq-input\" aria-label=\"Project name — read only\" value=\"Nasaq\" readonly>"
+        "html": "<input class=\"nq-input\" aria-label=\"Project name: read only\" value=\"Nasaq\" readonly>"
       },
       {
         "name": "Disabled",
-        "html": "<input class=\"nq-input\" aria-label=\"Project name — disabled\" disabled value=\"Unavailable\">"
+        "html": "<input class=\"nq-input\" aria-label=\"Project name: disabled\" disabled value=\"Unavailable\">"
       }
     ]
   },
@@ -110,30 +110,30 @@ globalThis.NASAQ_COMPONENTS_EN={
     "states": [
       {
         "name": "Default",
-        "html": "<select class=\"nq-select\" aria-label=\"Assistant — default\"><option>Choose an assistant</option><option>Writing</option></select>"
+        "html": "<select class=\"nq-select\" aria-label=\"Assistant: default\"><option>Choose an assistant</option><option>Writing</option></select>"
       },
       {
         "name": "Selected",
-        "html": "<select class=\"nq-select\" aria-label=\"Assistant — selected\"><option>Writing</option><option>Research</option></select>"
+        "html": "<select class=\"nq-select\" aria-label=\"Assistant: selected\"><option>Writing</option><option>Research</option></select>"
       },
       {
         "name": "Focus",
-        "html": "<select class=\"nq-select state-focus\" aria-label=\"Assistant — focus\"><option>Writing</option></select>"
+        "html": "<select class=\"nq-select state-focus\" aria-label=\"Assistant: focus\"><option>Writing</option></select>"
       },
       {
         "name": "Invalid",
-        "html": "<select class=\"nq-select\" aria-label=\"Assistant — invalid\" aria-invalid=\"true\" aria-describedby=\"state-select-error\"><option>Choose an assistant</option></select><small id=\"state-select-error\" class=\"nq-error-text\">Choose an assistant.</small>"
+        "html": "<select class=\"nq-select\" aria-label=\"Assistant: invalid\" aria-invalid=\"true\" aria-describedby=\"state-select-error\"><option>Choose an assistant</option></select><small id=\"state-select-error\" class=\"nq-error-text\">Choose an assistant.</small>"
       },
       {
         "name": "Disabled",
-        "html": "<select class=\"nq-select\" aria-label=\"Assistant — disabled\" disabled><option>Unavailable</option></select>"
+        "html": "<select class=\"nq-select\" aria-label=\"Assistant: disabled\" disabled><option>Unavailable</option></select>"
       }
     ]
   },
   "checkbox": {
     "name": "Checkbox",
     "desc": "Independent choices and explicit mixed selection.",
-    "html": "<fieldset style=\"border:0;padding:0\"><legend>Research sources</legend><label class=\"nq-check\"><input type=\"checkbox\" checked> Attached documents</label><label class=\"nq-check\"><input type=\"checkbox\"> Team library</label><label class=\"nq-check\"><input type=\"checkbox\" disabled> Archive — unavailable</label></fieldset>",
+    "html": "<fieldset style=\"border:0;padding:0\"><legend>Research sources</legend><label class=\"nq-check\"><input type=\"checkbox\" checked> Attached documents</label><label class=\"nq-check\"><input type=\"checkbox\"> Team library</label><label class=\"nq-check\"><input type=\"checkbox\" disabled> Archive: unavailable</label></fieldset>",
     "snippet": "<fieldset>\n <legend>Research sources</legend>\n <label class=\"nq-check\"><input type=\"checkbox\" checked> Documents</label>\n <label class=\"nq-check\"><input type=\"checkbox\"> Team library</label>\n</fieldset>",
     "rule": "Use a native checkbox. Set its indeterminate property for mixed state; give every choice a stable label.",
     "props": [
@@ -174,7 +174,7 @@ globalThis.NASAQ_COMPONENTS_EN={
   "switch": {
     "name": "Switch",
     "desc": "A setting that changes immediately.",
-    "html": "<label class=\"nq-check\"><input class=\"nq-switch\" type=\"checkbox\" role=\"switch\" checked> Save conversation history</label><label class=\"nq-check\"><input class=\"nq-switch\" type=\"checkbox\" role=\"switch\"> Usage notifications</label><label class=\"nq-check\"><input class=\"nq-switch\" type=\"checkbox\" role=\"switch\" disabled> Team sync — unavailable</label>",
+    "html": "<label class=\"nq-check\"><input class=\"nq-switch\" type=\"checkbox\" role=\"switch\" checked> Save conversation history</label><label class=\"nq-check\"><input class=\"nq-switch\" type=\"checkbox\" role=\"switch\"> Usage notifications</label><label class=\"nq-check\"><input class=\"nq-switch\" type=\"checkbox\" role=\"switch\" disabled> Team sync: unavailable</label>",
     "snippet": "<label class=\"nq-check\">\n <input class=\"nq-switch\" type=\"checkbox\" role=\"switch\" checked>\n Save conversation history\n</label>",
     "rule": "Use a native checkbox with role=\"switch\" and a stable label. Test click, Space, on/off, disabled, RTL and LTR; keep the label target at least 44px.",
     "props": [
@@ -249,7 +249,7 @@ globalThis.NASAQ_COMPONENTS_EN={
       },
       {
         "name": "Disabled",
-        "html": "<span class=\"nq-tab-sample disabled\">Archive — unavailable</span>"
+        "html": "<span class=\"nq-tab-sample disabled\">Archive: unavailable</span>"
       }
     ]
   },
@@ -396,7 +396,7 @@ globalThis.NASAQ_COMPONENTS_EN={
   "radio": {
     "name": "Radio",
     "desc": "Exactly one choice from mutually exclusive alternatives.",
-    "html": "<fieldset class=\"nq-radio-group\"><legend>Assistant style</legend><label class=\"nq-check\"><input type=\"radio\" name=\"assistant-tone\" checked> Direct</label><label class=\"nq-check\"><input type=\"radio\" name=\"assistant-tone\"> Detailed</label><label class=\"nq-check\"><input type=\"radio\" name=\"assistant-tone\" disabled> Custom — unavailable</label></fieldset>",
+    "html": "<fieldset class=\"nq-radio-group\"><legend>Assistant style</legend><label class=\"nq-check\"><input type=\"radio\" name=\"assistant-tone\" checked> Direct</label><label class=\"nq-check\"><input type=\"radio\" name=\"assistant-tone\"> Detailed</label><label class=\"nq-check\"><input type=\"radio\" name=\"assistant-tone\" disabled> Custom: unavailable</label></fieldset>",
     "snippet": "<fieldset class=\"nq-radio-group\">\n <legend>Assistant style</legend>\n <label class=\"nq-check\"><input type=\"radio\" name=\"tone\" value=\"direct\" checked> Direct</label>\n <label class=\"nq-check\"><input type=\"radio\" name=\"tone\" value=\"detailed\"> Detailed</label>\n</fieldset>",
     "rule": "Use a fieldset and legend with a shared name. Native arrow keys and Space should select choices. Radios select, rather than execute an action.",
     "props": [
@@ -451,23 +451,23 @@ globalThis.NASAQ_COMPONENTS_EN={
     "states": [
       {
         "name": "Empty",
-        "html": "<textarea class=\"nq-input nq-textarea\" aria-label=\"Instructions — empty\" rows=\"2\" placeholder=\"Your instructions…\"></textarea>"
+        "html": "<textarea class=\"nq-input nq-textarea\" aria-label=\"Instructions: empty\" rows=\"2\" placeholder=\"Your instructions…\"></textarea>"
       },
       {
         "name": "Filled",
-        "html": "<textarea class=\"nq-input nq-textarea\" aria-label=\"Instructions — filled\" rows=\"2\">Write a clear first draft.</textarea>"
+        "html": "<textarea class=\"nq-input nq-textarea\" aria-label=\"Instructions: filled\" rows=\"2\">Write a clear first draft.</textarea>"
       },
       {
         "name": "Focus",
-        "html": "<textarea class=\"nq-input nq-textarea state-focus\" aria-label=\"Instructions — focus\" rows=\"2\">Project draft</textarea>"
+        "html": "<textarea class=\"nq-input nq-textarea state-focus\" aria-label=\"Instructions: focus\" rows=\"2\">Project draft</textarea>"
       },
       {
         "name": "Invalid",
-        "html": "<textarea class=\"nq-input nq-textarea\" aria-label=\"Instructions — invalid\" aria-invalid=\"true\" rows=\"2\" aria-describedby=\"state-text-error\"></textarea><small id=\"state-text-error\" class=\"nq-error-text\">Describe the task.</small>"
+        "html": "<textarea class=\"nq-input nq-textarea\" aria-label=\"Instructions: invalid\" aria-invalid=\"true\" rows=\"2\" aria-describedby=\"state-text-error\"></textarea><small id=\"state-text-error\" class=\"nq-error-text\">Describe the task.</small>"
       },
       {
         "name": "Disabled",
-        "html": "<textarea class=\"nq-input nq-textarea\" aria-label=\"Instructions — disabled\" rows=\"2\" disabled>Unavailable</textarea>"
+        "html": "<textarea class=\"nq-input nq-textarea\" aria-label=\"Instructions: disabled\" rows=\"2\" disabled>Unavailable</textarea>"
       }
     ]
   },
@@ -511,8 +511,8 @@ globalThis.NASAQ_COMPONENTS_EN={
   "progress": {
     "name": "Progress",
     "desc": "Real progress with a stated value or an honest indeterminate state.",
-    "html": "<label for=\"usage-progress\">Quota used — 28%</label><progress id=\"usage-progress\" class=\"nq-progress\" max=\"100\" value=\"28\">28%</progress><label for=\"upload-progress\">Indeterminate progress — uploading</label><progress id=\"upload-progress\" class=\"nq-progress\">Uploading</progress>",
-    "snippet": "<label for=\"usage\">Quota used — 28%</label>\n<progress id=\"usage\" class=\"nq-progress\" max=\"100\" value=\"28\">28%</progress>",
+    "html": "<label for=\"usage-progress\">Quota used: 28%</label><progress id=\"usage-progress\" class=\"nq-progress\" max=\"100\" value=\"28\">28%</progress><label for=\"upload-progress\">Indeterminate progress: uploading</label><progress id=\"upload-progress\" class=\"nq-progress\">Uploading</progress>",
+    "snippet": "<label for=\"usage\">Quota used: 28%</label>\n<progress id=\"usage\" class=\"nq-progress\" max=\"100\" value=\"28\">28%</progress>",
     "rule": "Set value and max only when progress is known. Give the control a label. Omit value for indeterminate work and stop when finished or failed.",
     "props": [
       [

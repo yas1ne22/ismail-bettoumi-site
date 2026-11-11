@@ -1,4 +1,4 @@
-/* Nasaq 1.0 — native dialogs, accessible RTL tabs, dismissible tooltips. */
+/* Nasaq 1.0: native dialogs, accessible RTL tabs, dismissible tooltips. */
 (()=>{
  document.addEventListener('click',e=>{
   const open=e.target.closest('[data-open]');

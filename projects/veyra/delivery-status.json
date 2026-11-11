@@ -9,7 +9,7 @@
   "revision": {
     "name": "Visual city planning",
     "localExperience": "city.html",
-    "figmaSync": "scheduled for the next design-system update",
+    "figmaSync": "Not synchronized. The Figma file preserves Version 1; city.html is the current Version 2 local prototype.",
     "flow": [
       "Explore map",
       "Inspect place",
@@ -26,7 +26,10 @@
       "remove",
       "undo"
     ],
-    "map": "Interactive route-planning experience"
+    "map": "Interactive route-planning experience",
+    "currentEntry": "city.html",
+    "comparison": "index.html#prototype",
+    "scope": "One day with three curated Rome places. Discovery, timing review, reorder, remove and undo; no live travel service or cross-session saving."
   },
   "caseStudy": {
     "status": "Editorial revision complete",

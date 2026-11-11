@@ -41,7 +41,7 @@
   $('[data-token-reference]').textContent=`{${path}}`;
   $('[data-token-value]').textContent=values.action;
   $('[data-token-swatch]').style.background=values.action;
-  $('[data-token-inspector-path]').textContent=step==='semantic'?`${path} = ${values.action}`:step==='alias'?`${alias} → {${path}}`:'<button class="nq-button">';
+  $('[data-token-inspector-path]').textContent=step==='semantic'?`${path} = ${values.action}`:step==='alias'?`${alias}  {${path}}`:'<button class="nq-button">';
   $('[data-token-explanation]').textContent=({semantic:t('الدور يصف الغرض من اللون. لكل مظهر قيمته الخاصة.','The role describes the purpose of the color. Each appearance resolves its own value.'),alias:t('مرجع المكوّن يشير إلى الدور الدلالي؛ لا ينسخ قيمة اللون.','The component alias points to the semantic role, keeping one source for the color.'),interface:t('زر HTML أصلي: انتقل إليه بلوحة المفاتيح وجرّب التركيز والضغط.','A native HTML button: use your keyboard to try focus and activation.')})[step];
   $('[data-token-action]').setAttribute('aria-pressed',String(selected));
   $('[data-token-action-label]').textContent=selected?t('تم الحفظ ✓','Saved to workspace ✓'):t('حفظ في المساحة','Save to workspace');

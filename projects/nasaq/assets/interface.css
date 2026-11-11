@@ -1,4 +1,4 @@
-/* Nasaq 1.4 — documentation, workbench and studio share the UI token contract. */
+/* Nasaq 1.4: documentation, workbench and studio share the UI token contract. */
 html {scroll-padding-top:96px;scroll-behavior:auto}
 body {background:var(--nq-bg);color:var(--nq-text)}
 .topbar {height:72px;padding-inline:24px;gap:36px;background:var(--nq-surface);border-color:var(--nq-border);box-shadow:0 1px 8px #151A2203}

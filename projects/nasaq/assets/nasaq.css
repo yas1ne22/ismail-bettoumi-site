@@ -287,7 +287,7 @@ h1,h2,h3 {font-synthesis:none}
 /* Shared form-control geometry and states, including standalone use outside .nq. */
 .nq-input,.nq-select{box-sizing:border-box;inline-size:100%;min-inline-size:0;max-inline-size:100%;margin:0;min-block-size:48px;padding:11px var(--nq-component-input-padding-inline,16px);border:1px solid var(--nq-border-strong);border-radius:var(--nq-component-input-radius,12px);background:var(--nq-component-input-background);color:var(--nq-component-input-text);font:400 16px/1.5 var(--nq-font-body);vertical-align:middle;outline:none;box-shadow:0 1px 2px #18202B04;transition:border-color 120ms,box-shadow 120ms,background-color 120ms}
 .nq-input:hover:not(:disabled):not([readonly]),.nq-select:hover:not(:disabled){border-color:var(--nq-text)}
-.nq-input:focus,.nq-select:focus{outline:none;border-color:var(--nq-focus);box-shadow:0 0 0 3px color-mix(in srgb,var(--nq-focus) 18%,transparent)}
+.nq-input:focus,.nq-select:focus,.nq-input.state-focus,.nq-select.state-focus{outline:none;border-color:var(--nq-focus);box-shadow:0 0 0 3px color-mix(in srgb,var(--nq-focus) 18%,transparent)}
 .nq-input[aria-invalid=true],.nq-select[aria-invalid=true]{border-color:var(--nq-error)}
 .nq-input[aria-invalid=true]:focus,.nq-select[aria-invalid=true]:focus{box-shadow:0 0 0 3px color-mix(in srgb,var(--nq-error) 16%,transparent)}
 .nq-input:disabled,.nq-select:disabled{background:var(--nq-disabled);color:var(--nq-on-disabled);border-color:var(--nq-border);opacity:1;cursor:not-allowed;box-shadow:none;-webkit-text-fill-color:var(--nq-on-disabled)}
@@ -311,8 +311,8 @@ textarea.nq-input{display:block;block-size:auto;min-block-size:128px;resize:vert
 .nq-check:has(input:disabled){color:var(--nq-on-disabled)}
 .nq-radio-group{min-inline-size:0}
 .nq-radio-group legend{font-size:14px;font-weight:600;line-height:1.6;padding:0;margin:0 0 12px}
-@media(forced-colors:active){.nq-input:focus,.nq-select:focus{outline:2px solid Highlight;outline-offset:2px}.nq-check input:is([type=checkbox],[type=radio]):not(.nq-switch){appearance:auto;-webkit-appearance:auto}.nq-check input:is([type=checkbox],[type=radio])::before{content:none!important}}
-/* GENERATED TOKENS START — edit tokens.json, run scripts/build.py */
+@media(forced-colors:active){.nq-input:focus,.nq-select:focus,.nq-input.state-focus,.nq-select.state-focus{outline:2px solid Highlight;outline-offset:2px}.nq-check input:is([type=checkbox],[type=radio]):not(.nq-switch){appearance:auto;-webkit-appearance:auto}.nq-check input:is([type=checkbox],[type=radio])::before{content:none!important}}
+/* GENERATED TOKENS START: edit tokens.json, run scripts/build.py */
 :root, [data-theme="light"] {
  --nq-paper:rgb(244,246,248);
  --nq-white:rgb(255,255,255);
