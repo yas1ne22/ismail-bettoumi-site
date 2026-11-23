@@ -28,3 +28,18 @@ body[data-case-project="promptilo"] > .topbar-wrap {
 body[data-case-project="timer-gym"] > .topbar,
 body[data-case-project="nexus"] > .topbar { position: sticky; }
 body:is([data-case-project="prepflow"],[data-case-project="skinny"],[data-case-project="voicy"],[data-case-project="promptilo"],[data-case-project="timer-gym"],[data-case-project="nexus"]) :is(.review-snapshot,.review-deep-dive,.review-reflection) { scroll-margin-top: 8rem; }
+
+.case-hero-summary {
+  max-width: 58ch;
+  margin: 1.25rem 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+.case-hero-summary h2 {
+  margin: 0 0 0.4rem;
+  font: inherit;
+  font-weight: 700;
+}
+.case-hero-summary p {
+  margin: 0 0 0.65rem;
+}
